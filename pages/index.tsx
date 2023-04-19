@@ -7,11 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap-trial/dist/DrawSVGPlugin';
+// import { DrawSVGPlugin } from 'gsap-trial/dist/DrawSVGPlugin';
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
-import { SplitText } from 'gsap-trial/dist/SplitText';
+// import { SplitText } from 'gsap-trial/dist/SplitText';
 export default function Home(props: { header: string }) {
-  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin, SplitText);
+  gsap.registerPlugin(ScrollTrigger,  MotionPathPlugin, );
   gsap.defaults({ ease: 'none' });
   const svgRef = useRef(null);
   const svgRefdiv4 = useRef(null);
@@ -133,24 +133,24 @@ export default function Home(props: { header: string }) {
 
   const titleRef = useRef(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
-    tl.to(document.querySelectorAll('.title .word'), {
-      opacity: 1,
-      y: '0%',
-      rotation: '0deg',
-      ease: 'power4.inOut',
-      duration: 1.2,
-      stagger: 0.5,
-    });
-    gsap.set(document.querySelectorAll('.title'), { opacity: 1 });
-    gsap.set(document.querySelectorAll('.title .word'), { opacity: 0.0001, y: '200%', rotation: '3deg' });
-    new SplitText(document.querySelector('.title'), {
-      type: 'lines words',
-      linesClass: 'line line--++',
-      wordsClass: 'word word--++'
-    });
-  }, []);
+  // useEffect(() => {
+  //   const tl = gsap.timeline({ repeat: -1, yoyo: true });
+  //   tl.to(document.querySelectorAll('.title .word'), {
+  //     opacity: 1,
+  //     y: '0%',
+  //     rotation: '0deg',
+  //     ease: 'power4.inOut',
+  //     duration: 1.2,
+  //     stagger: 0.5,
+  //   });
+  //   gsap.set(document.querySelectorAll('.title'), { opacity: 1 });
+  //   gsap.set(document.querySelectorAll('.title .word'), { opacity: 0.0001, y: '200%', rotation: '3deg' });
+  //   new SplitText(document.querySelector('.title'), {
+  //     type: 'lines words',
+  //     linesClass: 'line line--++',
+  //     wordsClass: 'word word--++'
+  //   });
+  // }, []);
   const image = ['/image/next-js-icon-512x512-zuauazrk.png', '/image/Fastify.png', '/image/socket-io-logo-png-transparent.png', '/image/Tailwind_CSS_Logo.svg.png'
     , '/image/4195cf989fac0128a89669f40a1e3496.png', '/image/5847f40ecef1014c0b5e488a.png', '/image/django-logo-negative.png', '/image/prismaHD.png', '/image/communityIcon_4g1uo0kd87c61.png', '/image/Vue.png']
 
