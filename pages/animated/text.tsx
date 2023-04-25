@@ -1,7 +1,7 @@
 import { motion, } from "framer-motion";
 
 const AnimatedTextWord = ({ text }: any) => {
-    const words = text.split(" ") ?? [''] as [String];
+    const words = text ? text.split(" ") : [''] as [String];
     const container = {
       hidden: { opacity: 0 },
       visible: (i = 1) => ({
