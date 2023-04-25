@@ -38,7 +38,7 @@ const AnimatedTextWord = ({ text }: any) => {
         initial="hidden"
         animate="visible"
       >
-        {words.map((word, index) => (
+        {words.map((word : string, index : number) => (
           <motion.span
             variants={child}
             style={{ marginRight: "5px" }}
