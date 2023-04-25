@@ -64,7 +64,6 @@ export default function Home(props: { header: string }) {
       transition: {
         type: "spring",
         bounce: 0.4,
-        delay:1,
         duration: 2
       }
     }
