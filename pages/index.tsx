@@ -13,6 +13,7 @@ import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
 import ScrollSpy from "react-ui-scrollspy";
 import { motion, Variants } from "framer-motion";
 import AnimatedTextWord from './animated/text';
+import Head from 'next/head'
 
 export default function Home(props: { header: string }) {
   gsap.registerPlugin(ScrollTrigger, MotionPathPlugin,);
@@ -38,15 +39,32 @@ export default function Home(props: { header: string }) {
       }
     }
   }
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i: any) => {
+      const delay = 1 + i * 0.5;
+      return {
+        pathLength: 1,
+        opacity: 1,
+        transition: {
+          pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+          opacity: { delay, duration: 0.01 }
+        }
+      };
+    }
+  };
   const cardVariants: Variants = {
     offscreen: {
-      y: 300
+      y: 300,
+      opacity: 0,
     },
     onscreen: {
       y: 0,
+      opacity: 1,
       transition: {
         type: "spring",
-        bounce: 0.5,
+        bounce: 0.4,
+        delay:1,
         duration: 2
       }
     }
@@ -194,6 +212,9 @@ export default function Home(props: { header: string }) {
 
   return (
     <div className='h-full bg-white flex flex-col font-akshar ' ref={ref}>
+      <Head>
+        <title>Fluke jaja</title>
+      </Head>
       <ScrollSpy
         activeClass="active-scroll-spy"
         offsetBottom={100}
@@ -275,6 +296,29 @@ export default function Home(props: { header: string }) {
           {/* <svg ref={svgRefdiv1} height="100%" className='absolute inset-y-0 right-0 w-24 md:w-48'>
             <path className='theLine2' d="M 50 0 L 50 800" stroke="#E30B5C" strokeWidth="5" fill="none" />
           </svg> */}
+          <div className='absolute -bottom-10 right-0 h-16 w-full'>
+            <motion.svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 4000 200"
+              initial="hidden"
+              animate="visible"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.line
+                x1="50"
+                y1=""
+                x2="4000"
+                y2="0"
+                stroke="#E30B5C"
+                strokeWidth={50}
+                variants={draw}
+                custom={2}
+              />
+            </motion.svg>
+            
+          </div>
+
         </div>
         <div id='Projects' className='h-[40rem] flex justify-center items-center relative w-full bg-black text-white md:text-black '>
           <div className='w-[50rem] max-w-full  absolute  h-full py-20 bg-black md:bg-white none md:hidden'>
@@ -385,7 +429,7 @@ export default function Home(props: { header: string }) {
           }}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 1 }}
+            viewport={{ once: true, amount: 0.7 }}
             className='bg-white mix-w-[20rem] w-[40rem] flex md:flex-row flex-col h-[30rem] items-center rounded-3xl shadow-2xl shadow-pink-500 justity-normal md:justify-center'>
             <motion.div variants={slideDiv} >
               <div className='w-full  h-full flex justify-center items-center'>
@@ -399,6 +443,7 @@ export default function Home(props: { header: string }) {
               </div>
             </motion.div>
           </motion.div>
+
           {/* <svg ref={svgRefdiv4} height="100%" className='absolute inset-y-0 right-0 w-24 md:w-48'>
             <path className='theLine1 md:bg-white bg-black' d="M 50 0 L 50 640" stroke='#E30B5C' strokeWidth="5" fill="none" />
           </svg> */}
