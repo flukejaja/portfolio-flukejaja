@@ -29,17 +29,17 @@ module.exports = {
           },
           '50%': {
             'background-position': '20px 40px',
-            '-webkit-mask-position': '100px 107px',
+            // '-webkit-mask-position': '100px 107px',
             '-webkit-transform': 'rotate(12deg)',
           },
           '80%': {
             'background-position': '100px 20px',
-            '-webkit-mask-position': '-100px 107px',
+            // '-webkit-mask-position': '-100px 107px',
             '-webkit-transform': 'rotate(-12deg) scale(1.2)',
           },
           '100%': {
             'background-position': '0 0',
-            '-webkit-mask-position': '10px 10px',
+            // '-webkit-mask-position': '10px 10px',
             '-webkit-transform': 'rotate(0)',
           },
         },

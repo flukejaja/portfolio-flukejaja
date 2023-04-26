@@ -234,17 +234,19 @@ export default function Home(props: { header: string }) {
               </div>
 
             </div>
-            <div className='w-full h-full flex justify-center items-center relative overflow-hidden'>
-              <div className='h-[40rem] w-[40rem] max-w-full animate-movemask ' style={{
+            <div className='w-full h-full flex justify-center items-center relative overflow-hidden pt-48 md:pt-0'>
+              <div className='h-[40rem] w-[40rem] max-w-full md:animate-movemask bg-black' style={{
                 WebkitMask: "url('/image/Regular_blob.svg') no-repeat",
                 mask: "url('/image/Regular_blob.svg') no-repeat"
-                , transformOrigin: "50% 50%"
-              }}> <Image
+                
+              }}> 
+              <Image
                   src='/image/53e98f5701d854bc1f9295cc7fbb25f6.jpg'
                   alt=''
-                  className='object-fit'
+                  className='object-cover'
                   fill
-                /></div>
+                />
+                </div>
             </div>
             <div className='absolute w-full inset-x-0 bottom-10 '>
               <Slider {...settings} >
@@ -264,7 +266,7 @@ export default function Home(props: { header: string }) {
             <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 w-[30rem] max-w-full bg-white flex items-center justify-center rounded-2xl text-black relative'>
               <Image src={'/image/codewars.jpg'} alt='' fill className="w-full h-full top-0 left-0 object-cover rounded-2xl" />
             </a>
-            <div className='w-[30rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000'><p>About me</p></div>
+            <div className='w-[30rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-20'><p className='text-lg'>My name is Fluke. I want to develop programming skills and learning more for  work on future.</p></div>
             <div className='w-[30rem] max-w-full bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
               <div className='w-full  flex justify-center flex-col items-center whitespace-nowrap'>
                 <p>Tools</p>
@@ -429,14 +431,14 @@ export default function Home(props: { header: string }) {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.7 }}
-            className='bg-white mix-w-[20rem] w-[40rem] flex md:flex-row flex-col h-[30rem] items-center rounded-3xl shadow-2xl shadow-pink-500 justity-normal md:justify-center'>
+            className='bg-white mix-w-[20rem] w-[40rem] flex md:flex-row flex-col h-[30rem] items-center rounded-3xl shadow-2xl shadow-pink-500  justify-center'>
             <motion.div variants={slideDiv} >
               <div className='w-full  h-full flex justify-center items-center'>
                 <div className='h-44 w-44 rounded-full overflow-hidden relative'>
                   <Image src={'/image/53e98f5701d854bc1f9295cc7fbb25f6.jpg'} alt='proflie' fill className='h-full w-full object-fit' />
                 </div>
               </div>
-              <div className='w-full h-full  flex flex-col justify-center items-center'>
+              <div className='w-full  flex flex-col justify-center items-center'>
                 <a>Github : flukejaja</a>
                 <a>Facebook : Pakkapong Sittiporn</a>
               </div>
