@@ -25,13 +25,11 @@ export default function Home(props: { header: string }) {
 
   const slideDiv: Variants = {
     offscreen: {
-      x: 20,
-      opacity: 0,
+      x: 60,
 
     },
     onscreen: {
       x: 0,
-      opacity: 1,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -263,13 +261,13 @@ export default function Home(props: { header: string }) {
         </div>
         <div id='About' className='h-[50rem] bg-black flex justify-center items-center text-black twice relative '>
           <div id="gsap-div" className='px-5 flex flex-col md:flex-row  w-full space-x-0 md:space-x-5 justify-center items-center space-y-5 md:space-y-0'>
-            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 basis-4/12 bg-white flex items-center justify-center rounded-2xl text-black relative'>
+            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 w-[20rem] max-w-full bg-white flex items-center justify-center rounded-2xl text-black relative'>
               <Image src={'/image/codewars.jpg'} alt='' fill className="w-full h-full top-0 left-0 object-cover rounded-2xl" />
             </a>
-            <div className='basis-4/12 bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-3 py-3'>
+            <div className='w-[20rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-3 py-3'>
               <p className='text-lg'>My name is Fluke. I want to develop programming skills and learning more for  work on future.</p>
             </div>
-            <div className=' basis-4/12 bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
+            <div className=' w-[20rem] max-w-full bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
               <div className='w-2/6  flex justify-center flex-col items-center whitespace-nowrap'>
                 <p>Tools</p>
                 <p>Nextjs / React</p>
@@ -419,25 +417,13 @@ export default function Home(props: { header: string }) {
           </motion.div>
         </div>
         <div id='Contact' className='h-[40rem] bg-black flex justify-center items-center relative text-black px-10 py-10'>
-          <motion.div variants={{
-            offscreen: {
-              opacity: 0,
-            },
-            onscreen: {
-              opacity: 1,
-              transition: {
-                type: "spring",
-                bounce: 0.5,
-                duration: 2
-              }
-            }
-          }}
+          <motion.div 
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.7 }}
-            className='bg-white mix-w-[20rem] w-[40rem] flex md:flex-row flex-col h-[30rem] items-center rounded-3xl shadow-2xl shadow-pink-500  justify-center'>
-            <motion.div variants={slideDiv} >
-              <div className='w-full  h-full flex justify-center items-center'>
+            className='bg-white w-[40rem] max-w-full px-10 flex md:flex-row flex-col h-[30rem] items-center rounded-3xl shadow-2xl shadow-pink-500  justify-center'>
+            <motion.div variants={slideDiv} className='w-full  h-full flex justify-center items-center'>
+              <div >
                 <div className='h-44 w-44 rounded-full overflow-hidden relative'>
                   <Image src={'/image/53e98f5701d854bc1f9295cc7fbb25f6.jpg'} alt='proflie' fill className='h-full w-full object-fit' />
                 </div>
