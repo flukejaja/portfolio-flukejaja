@@ -225,7 +225,7 @@ export default function Home(props: { header: string }) {
           <div className='flex flex-col  md:flex-row h-full w-full justify-center items-center relative'>
             <div className='w-full flex flex-col items-center justify-center  h-full '>
               <div className='h-44'></div>
-              <div className='flex flex-col  h-full w-[40rem] max-w-full items-center space-y-5 ' >
+              <div className='flex flex-col  h-full w-1/2 items-center space-y-5 ' >
                 {/* <p className='text-2xl md:text-6xl '>Hello</p> */}
                 <AnimatedTextWord text="Hi" />
                 <AnimatedTextWord text="I'm Pakkapong Sittiporn" />
@@ -238,15 +238,15 @@ export default function Home(props: { header: string }) {
               <div className='h-[40rem] w-[40rem] max-w-full md:animate-movemask bg-black' style={{
                 WebkitMask: "url('/image/Regular_blob.svg') no-repeat",
                 mask: "url('/image/Regular_blob.svg') no-repeat"
-                
-              }}> 
-              <Image
+
+              }}>
+                <Image
                   src='/image/53e98f5701d854bc1f9295cc7fbb25f6.jpg'
                   alt=''
                   className='object-cover'
                   fill
                 />
-                </div>
+              </div>
             </div>
             <div className='absolute w-full inset-x-0 bottom-10 '>
               <Slider {...settings} >
@@ -263,20 +263,23 @@ export default function Home(props: { header: string }) {
         </div>
         <div id='About' className='h-[50rem] bg-black flex justify-center items-center text-black twice relative '>
           <div id="gsap-div" className='px-5 flex flex-col md:flex-row  w-full space-x-0 md:space-x-5 justify-center items-center space-y-5 md:space-y-0'>
-            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 w-[30rem] max-w-full bg-white flex items-center justify-center rounded-2xl text-black relative'>
+            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 basis-4/12 bg-white flex items-center justify-center rounded-2xl text-black relative'>
               <Image src={'/image/codewars.jpg'} alt='' fill className="w-full h-full top-0 left-0 object-cover rounded-2xl" />
             </a>
-            <div className='w-[30rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-20'><p className='text-lg'>My name is Fluke. I want to develop programming skills and learning more for  work on future.</p></div>
-            <div className='w-[30rem] max-w-full bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
-              <div className='w-full  flex justify-center flex-col items-center whitespace-nowrap'>
+            <div className='basis-4/12 bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-3 py-3'>
+              <p className='text-lg'>My name is Fluke. I want to develop programming skills and learning more for  work on future.</p>
+            </div>
+            <div className=' basis-4/12 bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
+              <div className='w-2/6  flex justify-center flex-col items-center whitespace-nowrap'>
                 <p>Tools</p>
                 <p>Nextjs / React</p>
                 <p>Vue</p>
                 <p>Flutter / Firebase</p>
                 <p>Prisma / Fastify</p>
-                <p>Bootstrap / Tailwind css</p>
+                <p>Bootstrap </p>
+                <p>Tailwind css</p>
               </div>
-              <div className='w-full  flex justify-center flex-col items-center'>
+              <div className='w-2/6  flex justify-center flex-col items-center whitespace-nowrap'>
                 <p>Skill</p>
                 <p>Javascript</p>
                 <p>Typescript</p>
@@ -285,7 +288,7 @@ export default function Home(props: { header: string }) {
                 <p>Python</p>
                 <p>Java</p>
               </div>
-              <div className='w-full  flex justify-center flex-col items-center whitespace-nowrap'>
+              <div className='w-2/6  flex justify-center flex-col items-center whitespace-nowrap'>
                 <p>Database</p>
                 <p>MongoDB</p>
                 <p>MySQL</p>
@@ -317,7 +320,7 @@ export default function Home(props: { header: string }) {
                 custom={2}
               />
             </motion.svg>
-            
+
           </div>
 
         </div>
@@ -365,6 +368,7 @@ export default function Home(props: { header: string }) {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
+            className='w-full'
           >
             <motion.div variants={cardVariants}>
               <div className='md:flex hidden w-full justify-center  space-x-3'>
