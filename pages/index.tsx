@@ -198,7 +198,7 @@ export default function Home() {
               <Image src={'/image/codewars.jpg'} alt='' fill className="w-full h-full top-0 left-0 object-cover rounded-2xl" />
             </a>
             <div className='w-[20rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-3 py-3'>
-              <p className='text-lg'>My name is Fluke. I want to develop programming skills and learning more for  work on future.</p>
+              <p className='text-lg'>Experienced in Next.js, Fastify, and MongoDB, knowledgeable in UI/UX design and API development. A quick learner with strong communication and problem-solving skills.</p>
             </div>
             <div className=' w-[20rem] max-w-full bg-white h-60 flex justify-center text-black rounded-2xl px-5 hover:shadow-pink-600 shadow-2xl duration-1000'>
               <div className='w-2/6  flex justify-center flex-col items-center whitespace-nowrap'>
