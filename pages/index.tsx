@@ -248,9 +248,7 @@ export default function Home() {
                 custom={2}
               />
             </motion.svg>
-
           </div>
-
         </div>
         <div id='Projects' className='h-[40rem] flex justify-center items-center relative w-full bg-black text-white md:text-black '>
           <div className='w-[50rem] max-w-full  absolute  h-full py-20 bg-black md:bg-white none md:hidden'>
@@ -322,6 +320,7 @@ export default function Home() {
                     <p>Tailwinds</p>
                     <p>Fastity / MongoDB</p>
                     <p>Prisma</p>
+                    <a target="_blank" className='text-pink-800 underline hover:cursor-pointer' href='https://adaptive-testing.vercel.app/'>Click links</a>
                   </div>
                 </div>
                 <div className='w-[30rem] max-w-full bg-black shadow-pink-600 shadow-xl animate-mymove rounded-lg overflow-hidden'>
