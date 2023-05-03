@@ -194,8 +194,9 @@ export default function Home() {
         </div>
         <div id='About' className='h-[50rem] bg-black flex justify-center items-center text-black twice relative '>
           <div id="gsap-div" className='px-5 flex flex-col md:flex-row  w-full space-x-0 md:space-x-5 justify-center items-center space-y-5 md:space-y-0'>
-            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 w-[20rem] max-w-full bg-white flex items-center justify-center rounded-2xl text-black relative'>
+            <a href='https://www.codewars.com/users/flukejaja' className='hover:shadow-pink-600 shadow-2xl duration-1000 h-60 w-[20rem] max-w-full bg-white flex flex-col items-center justify-center rounded-2xl text-black relative'>
               <Image src={'/image/codewars.jpg'} alt='' fill className="w-full h-full top-0 left-0 object-cover rounded-2xl" />
+              <div className='absolute inset-x-0 -top-5 h-8'><Image src={'/large.svg'} alt='' fill className="w-full h-full object-fit" /></div>
             </a>
             <div className='w-[20rem] max-w-full bg-white h-60 rounded-2xl hover:shadow-pink-600 shadow-2xl duration-1000 flex justify-center items-center px-3 py-3'>
               <p className='text-lg'>Experienced in Next.js, Fastify, and MongoDB, knowledgeable in UI/UX design and API development. A quick learner with strong communication and problem-solving skills.</p>
